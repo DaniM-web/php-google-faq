@@ -1,0 +1,102 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a,
+a:visited,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+body{
+  background-color: #fff;
+  color: rgba(0,0,0,0.87);
+  font-family: Roboto,arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.54;
+}
+
+.navbar{
+  position: fixed;
+  background: #fff;
+  border-bottom: 1px solid rgba(151,151,151,0.5);
+  padding: 24px 24px 0 24px;
+  top: 0;
+  width: 100%;
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo p{
+  display: inline-block;
+  color: #5f6368;
+  font-family: "product sans","open sans",arial,sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  padding-left: 10px;
+}
+.logo img{
+  vertical-align: middle;
+}
+
+.nav-menu{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+.menu-sx{
+  width: 40%;
+}
+.menu-sx ul{
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+}
+.menu-sx ul li a{
+  padding: 0 0 6px 0;
+  font-size: 14px;
+  color: #5f6368;
+  font-weight: 600;
+}
+.menu-dx a{
+  padding: 0 0 6px 0;
+  font-size: 14px;
+  color: #5f6368;
+  font-weight: 600;
+}
+.menu-dx a.selected-a{
+  color: #3367d6;
+  padding-bottom: 3px;
+}
+li.selected{
+  border-bottom: 3px solid #3367d6;
+}
+
+main{
+  width: 100%;
+}
+.container{
+  width: 55%;
+  margin: 92px auto;
+  padding: 32px;
+}
+
+.container h2{
+color: #3c4043;
+font-family: 'Google Sans',sans-serif;
+font-weight: 700;
+font-size: 24px;
+line-height: 32px;
+margin: 0;
+padding: 64px 0 0 0;
+}
+.container p{
+  letter-spacing: .2px;
+  line-height: 24px;
+  padding-top: 20px;
+}

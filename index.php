@@ -42,10 +42,11 @@
       <div class="numero">
         <h2>
           <?php
+          $currentFaq = $faqinput;
             if (($faqinput == 0)||($faqinput > count($faqArray)) ){
-              $faqinput = count($faqArray);
+              $currentFaq= count($faqArray);
             }
-            echo "Numero FAQ: " . $faqinput;
+            echo "Numero FAQ: " . $currentFaq;
            ?>
         </h2>
       </div>

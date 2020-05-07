@@ -42,7 +42,10 @@
       <div class="numero">
         <h2>
           <?php
-            echo "Numero FAQ: " . count($faqArray);
+            if (($faqinput == 0)||($faqinput > count($faqArray)) ){
+              $faqinput = count($faqArray);
+            }
+            echo "Numero FAQ: " . $faqinput;
            ?>
         </h2>
       </div>
@@ -65,6 +68,7 @@
             if ($key == $faqinput) {
               printFaq($singlefaq);
               break;
+
             }elseif(
               ($faqinput == 0)
               || ($faqinput > count($faqArray))

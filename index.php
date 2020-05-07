@@ -5,7 +5,7 @@
     <title>Google FAQ - Replica</title>
     <link rel="stylesheet" href="css/style.css">
     <?php require_once "db.php" ?>
-
+    <?php $faqinput = $_GET['faq'];  ?>
   </head>
 
   <body>
@@ -50,19 +50,27 @@
 
     <main>
       <?php
+
         function printFaq($elemento){
-          $numerofaq = $key + 1;
-          // $faqinput = $_GET['faq'];
-          // if ($faqinput == $numerofaq) {
+
             echo '<h2>' . $elemento['question'] . '</h2>';
             echo '<p>' . $elemento['answer'] . '</p>';
-          // }
         }
        ?>
       <div class="container">
         <?php
+
           foreach ($faqArray as $key => $singlefaq) {
-            printFaq($singlefaq);
+            $key++;
+            if ($key == $faqinput) {
+              printFaq($singlefaq);
+              break;
+            }elseif(
+              ($faqinput == 0)
+              || ($faqinput > count($faqArray))
+             ) {
+              printFaq($singlefaq);
+            }
           }
           ?>
       </div>
